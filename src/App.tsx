@@ -1,17 +1,14 @@
 // import { useState } from 'react'
 
-import './App.css'
-import GlobalStyles from './components/utils/GlobalStyling'
+import "./App.css";
+import GlobalStyles from "./components/utils/GlobalStyling";
 
 function App() {
-
-
   return (
     <>
-    <GlobalStyles/>
-      gio
+      <GlobalStyles />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

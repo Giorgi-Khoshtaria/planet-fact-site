@@ -13,11 +13,12 @@ const GlobalStyles = createGlobalStyle`
 }
 body{
     background-color: ${defaultTheme.colors.black};
-    font-family: ${defaultTheme.fonts.primary};
+    // font-family: ${defaultTheme.fonts.spartan};
     display: flex;
     /* align-items: center; */
     justify-content: center;
     height: 100vh;
+    width: 100%;
 
 }
 
