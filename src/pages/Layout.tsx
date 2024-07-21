@@ -1,9 +1,32 @@
-import React from "react";
-import styled from "styled-components";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import Header from "../components/Header";
-import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import styled from "styled-components";
+
+const navigationLinks: string[] = [
+  "/Mercury",
+  "/Venus",
+  "/Earth",
+  "/Mars",
+  "/Jupiter",
+  "/Saturn",
+  "/Uranus",
+  "/Neptune",
+];
 
 function Layout() {
+  const location = useLocation();
+  const pathname = location.pathname;
+  console.log(pathname, "wwwwwwww");
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (navigationLinks.includes(pathname)) {
+      navigate(pathname);
+    } else {
+      navigate("/Earth");
+    }
+    console.log("mounted");
+  }, []);
   return (
     <Container>
       <Header />
